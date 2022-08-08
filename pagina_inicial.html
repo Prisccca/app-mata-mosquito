@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Inicial</title>
+   <link rel="stylesheet" href=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+   <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="d-flex justify-content-center">
+                    <img src="./img/game.png" alt="">
+                </div> 
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="d-flex justify-content-center">
+                    <div class="mb-2">
+                        <select  id="nivel" class="form-control">
+                            <option value="">--Selecione o nível--</option>
+                            <option value="normal">Normal</option>
+                            <option value="dificil">Dificil</option>
+                            <option value="chucknorris">Chuck Norris</option>
+                        </select>
+                    </div>
+                </div> 
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="d-flex justify-content-center">
+                   <button onclick="iniciarJogo()" type="button" class="btn btn-danger btn-lg">Iniciar Jogo</button>
+                </div> 
+            </div>
+        </div>
+
+    </div>
+    
+    <script>
+
+        //iniciar jogo
+                function iniciarJogo() {
+                    let nivel = document.getElementById('nivel').value
+                    if ( nivel === ''){
+                    alert('Selecione um nível para iniciar o jogo')
+                    return false
+                    }
+                    
+                    window.location.href = "index.html?" + nivel;
+
+                }
+    </script>
+
+</body>
+</html
